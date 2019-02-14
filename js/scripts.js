@@ -37,10 +37,21 @@ $(document).ready(function(){
     $("#output2").text(result);
     event.preventDefault();
   });
-    //var number1 = parseInt($("#subtract1").val());
-    //var number2 = parseInt($("#subtract2").val());
 
+  $("form#multiply").submit(function(event){
+    var number1 = parseInt($("#multiply1").val());
+    var number2 = parseInt($("#multiply2").val());
+    var result = multiply(number1, number2);
+    $("#output3").text(result);
+    event.preventDefault();
+  });
 
-    //event.preventDefault();
+  $("form#divide").submit(function(event){
+    var number1 = parseInt($("#divide1").val());
+    var number2 = parseInt($("#divide2").val());
+    var result = divide(number1, number2);
+    $("#output4").text(result);
+    event.preventDefault();
+  });
 
 });
